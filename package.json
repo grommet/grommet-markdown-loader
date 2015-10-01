@@ -1,14 +1,14 @@
 {
-  "name": "markdown-loader",
-  "version": "0.1.7",
-  "description": "markdown-loader for webpack",
+  "name": "grommet-markdown-loader",
+  "version": "0.2.0",
+  "description": "load markdown files inside grommet environment",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/peerigon/markdown-loader"
+    "url": "https://github.com/grommet/grommet-markdown-loader"
   },
   "keywords": [
     "webpack",
@@ -16,14 +16,17 @@
     "markdown",
     "html"
   ],
-  "author": "peerigon <developers@peerigon.com>",
+  "authors": [
+    "peerigon <developers@peerigon.com>",
+    "alansouzati"
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/peerigon/markdown-loader/issues"
+    "url": "https://github.com/grommet/grommet-markdown-loader/issues"
   },
-  "homepage": "https://github.com/peerigon/markdown-loader",
+  "homepage": "https://github.com/grommet/grommet-markdown-loader",
   "dependencies": {
-    "marked": "^0.3.2",
+    "highlight.js": "^8.5.0",
     "loader-utils": "^0.2.7",
     "object-assign": "^2.0.0"
   }

@@ -15,10 +15,14 @@ renderer.code = function(code, language){
   if (language && language !== 'nohighlight'
     && language !== 'ascii-art' && language !== 'ditaa') {
     code = hljs.highlight(lang, code).value;
+  } else {
+    code = code.replace(/</g, "&lt;").replace(/>/g, "&gt;");
   }
 
   return '<pre><code class="hljs ' + lang + '">' +
-    code.replace(/\n/g, '<br />').replace(/{/g, "{'{'}").replace(/^'}/g, "{'}'}") + '</code></pre>';
+    code.replace(/\n/g, '<br />')
+    .replace(/{/g, "{'{'}")
+    .replace(/^'}/g, "{'}'}") + '</code></pre>';
 };
 
 renderer.paragraph = function (text) {

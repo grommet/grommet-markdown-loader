@@ -3,13 +3,8 @@
 var loaderUtils = require("loader-utils");
 var assign = require("object-assign");
 
-var hljs = require('highlight.js/lib/highlight');
+var hljs = require('highlight.js');
 hljs.configure({useBR: true});
-hljs.registerLanguage('bash', require('highlight.js/lib/languages/bash'));
-hljs.registerLanguage('xml', require('highlight.js/lib/languages/xml'));
-hljs.registerLanguage('javascript', require('highlight.js/lib/languages/javascript'));
-hljs.registerLanguage('python', require('highlight.js/lib/languages/python'));
-hljs.registerLanguage('scss', require('highlight.js/lib/languages/scss'));
 
 var marked = require("./marked.js");
 var renderer = new marked.Renderer();
@@ -17,7 +12,8 @@ var renderer = new marked.Renderer();
 renderer.code = function(code, language){
   var lang = language || 'nohighlight';
 
-  if (language && language !== 'nohighlight' && language !== 'ascii-art') {
+  if (language && language !== 'nohighlight'
+    && language !== 'ascii-art' && language !== 'ditaa') {
     code = hljs.highlight(lang, code).value;
   }
 

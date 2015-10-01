@@ -1,7 +1,7 @@
 grommet-markdown-loader
 ===============
 
-Load markdown files inside Grommet environment.
+Load markdown files inside your Grommet environment.
 
 This work has been done based on the awesome [markdown-loader](https://github.com/peerigon/markdown-loader)
 

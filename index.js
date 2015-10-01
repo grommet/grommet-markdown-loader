@@ -26,7 +26,6 @@ renderer.code = function(code, language){
 };
 
 renderer.paragraph = function (text) {
-  console.log(text);
   return '<p>' + text.replace(/\n/g, '<br />').replace(/{/g, "{'{'}").replace(/^'}/g, "{'}'}") + '</p>';
 }
 

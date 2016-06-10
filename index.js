@@ -20,13 +20,11 @@ renderer.code = function(code, language){
   }
 
   return '<pre><code class="hljs ' + lang + '">' +
-    code.replace(/\n/g, '<br />')
-    .replace(/{/g, "{'{'}")
-    .replace(/^'}/g, "{'}'}") + '</code></pre>';
+    code.replace(/\n/g, '<br />') + '</code></pre>';
 };
 
 renderer.paragraph = function (text) {
-  return '<p>' + text.replace(/\n/g, '<br />').replace(/{/g, "{'{'}").replace(/^'}/g, "{'}'}") + '</p>';
+  return '<p>' + text.replace(/\n/g, '<br />') + '</p>';
 }
 
 // default option
